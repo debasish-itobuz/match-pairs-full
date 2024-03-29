@@ -56,7 +56,8 @@ function showImages(url) {
 }
 
 const showItem = (e) => {
-  if (!stop) {
+  if (!stop && e.target.localName !== 'img') {
+    console.log(e)
     e.target.children[0].classList.add("show-visibility");
     count++;
     console.log(count);
