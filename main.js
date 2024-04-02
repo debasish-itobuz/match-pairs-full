@@ -34,7 +34,6 @@ for (let i = 0; i < 16; i++) {
   if (i !== 0 && i % 4 === 0) rowCount++;
   
   const randomItem = Math.floor(Math.random() * imgArr.length);
-  console.log(imgArr[randomItem], randomItem);
   const item = showImages(imgArr[randomItem]);
   itemRow[rowCount].append(item);
   imgArr.splice(randomItem, 1);
@@ -44,23 +43,18 @@ const itemDiv = document.querySelectorAll(".itemDiv");
 
 function showImages(url) {
   const div = document.createElement("div");
-  div.setAttribute(
-    "class",
-    "h-full w-full flex justify-center items-center bg-gray-200 rounded itemDiv cursor-pointer"
-  );
+  div.setAttribute("class","h-full w-full flex justify-center items-center bg-gray-200 rounded itemDiv cursor-pointer");
   const image = document.createElement("img");
-  image.setAttribute("class", "w-[80%] h-[80%] invisible");
+  image.setAttribute("class", "w-[100%] h-[100%] invisible");
   image.src = url;
   div.append(image);
   return div;
 }
 
 const showItem = (e) => {
-  if (!stop && e.target.localName !== 'img') {
-    console.log(e)
+  if (!stop && e.target.localName !== 'img' && count < 2) {
     e.target.children[0].classList.add("show-visibility");
     count++;
-    console.log(count);
     arr.push(e.target.children[0]);
     if (count === 2) {
       setTimeout(() => {
