@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Mind Game1</title>
+    <title>Mind Game</title>
 </head>
 
 <body class="">
@@ -18,7 +18,7 @@
             <div>
                 <p class="text-xl">Pairs matched</p>
                 <div class="flex">
-                <p id="pairs" class="text-2xl">0</p><span class="text-2xl"> /8</span>
+                <p id="pairs" class="text-2xl">0</p><span class=" text-2xl"> /</span><span class="text-2xl" id="allPairs"> 8</span>
 
                 </div>
                 </div>
@@ -28,19 +28,17 @@
             </div>
         </div>
 
-        <div class="board gap-2 w-[450px] h-[450px] flex flex-col ">
-            
-            
-            <div class="row gap-2 flex h-full itemRow">
+        <div class="board gap-2 flex flex-col ">
+            <div class="row gap-2 flex itemRow h-[110px] w-[450px]">
 
             </div>
-            <div class="row gap-2 flex h-full itemRow">
+            <div class="row gap-2 flex itemRow h-[110px] w-[450px]">
                 
             </div>
-            <div class="row gap-2 flex h-full itemRow">
+            <div class="row gap-2 flex itemRow h-[110px] w-[450px]">
                 
             </div>
-            <div class="row gap-2 flex h-full itemRow">
+            <div class="row gap-2 flex itemRow h-[110px] w-[450px]">
                 
             </div>
             
@@ -48,8 +46,8 @@
     </section>
 
     <div class="flex gap-4 justify-end items-start w-[52%] mt-10">
-        <button class="bg-cyan-200 px-2 py-1 rounded font-medium text-xl" id="reset">Reset game</button>
-        <button class="bg-slate-300 px-2 py-1 rounded font-medium text-xl" id="endGame">End game</button>
+        <button class="bg-cyan-200 hover:bg-green-400 text-white ease-in-out px-2 py-1 rounded font-medium text-xl" id="reset">Reset game</button>
+        <button class="bg-slate-300 hover:bg-red-400 text-white ease-in-out px-2 py-1 rounded font-medium text-xl " id="endGame">End game</button>
     </div>
     <script src="./main.js"></script>
 
